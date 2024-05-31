@@ -5,6 +5,10 @@ metadata:
   name: ui5con.sample.app
 builder:
   customTasks:
+    - name: debugger-remover
+      beforeTask: generateComponentPreload
+      configuration:
+        path: /resources
     - name: ui5-tooling-stringreplace-task
       afterTask: replaceVersion
       configuration:
@@ -30,3 +34,11 @@ server:
         replace:
           - placeholder: "${project.version}"
             value: "1.0.0-SNAPSHOT"
+---
+specVersion: "3.0"
+kind: extension
+type: task
+metadata:
+  name: debugger-remover
+task:
+  path: lib/task/debuggerRemover.js
