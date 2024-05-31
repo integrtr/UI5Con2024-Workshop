@@ -1,0 +1,22 @@
+{
+  "name": "ui5con-sample-app",
+  "version": "1.0.0",
+  "description": "Sample UI5 Application for UI5Con workshop",
+  "author": "TheVivekGowda, NitishMehta",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "start": "ui5 serve --port 8080 --open index.html",
+    "build": "ui5 build --clean-dest"
+  },
+  "dependencies": {
+    "@ui5/cli": "^3.10.3"
+  },
+  "devDependencies": {
+    "pdfkit": "^0.15.0",
+    "ui5-tooling-stringreplace": "^3.2.2"
+  }
+}
