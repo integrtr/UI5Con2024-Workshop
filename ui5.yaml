@@ -17,16 +17,16 @@ builder:
         replace:
           - placeholder: "${project.version}"
             value: "1.0.0-SNAPSHOT"
-    - name: debugger-remover
-      beforeTask: generateComponentPreload
+    - name: ui5-task-debugger-remover
+      beforeTask: minify
       configuration:
         path: /resources
-    - name: file-commenter
-      beforeTask: generateComponentPreload
+    - name: ui5-task-file-commenter
+      beforeTask: minify
       configuration:
         path: /resources
-    - name: create-report
-      afterTask: generateComponentPreload
+    - name: ui5-task-create-report
+      afterTask: minify
 server:
   customMiddleware:
     - name: ui5-tooling-stringreplace-middleware
@@ -45,7 +45,7 @@ specVersion: "3.0"
 kind: extension
 type: task
 metadata:
-  name: debugger-remover
+  name: ui5-task-debugger-remover
 task:
   path: lib/task/debuggerRemover.js
 ---
@@ -53,7 +53,7 @@ specVersion: "3.0"
 kind: extension
 type: task
 metadata:
-  name: file-commenter
+  name: ui5-task-file-commenter
 task:
   path: lib/task/fileCommenter.js
 ---
@@ -61,6 +61,6 @@ specVersion: "3.0"
 kind: extension
 type: task
 metadata:
-  name: create-report
+  name: ui5-task-create-report
 task:
   path: lib/task/createReport.js
