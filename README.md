@@ -122,8 +122,9 @@ task:
 - Make sure to use `log.info` wherever possible. Helps other developers to understand your code.
 - Provide user arguments instead of hardcoding values to make it more generic and productive
 - Handle maximum error scenarios to make solutions stable
+- API Reference: https://sap.github.io/ui5-tooling/v3/api/index.html
 
-## Contibution to UI5 Community
+## Contribution to UI5 Community
 
 You can submit your custom tasks and middlewares to UI5 Community at https://github.com/ui5-community/ui5-ecosystem-showcase.
 
